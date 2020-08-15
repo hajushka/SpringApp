@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p th:text="'Your id, ' + ${id} + ' select country ' + ${country}"></p>
+    <!--
+    <p th:text="'Hello, ' + ${name} + ' and welcome!'"></p>
+    <form th:action="@{/hi}">
+        <input type="text" th:name="name">
+        <input type="submit">
+    </form>-->
+    <form th:action="@{/selectobj}">
+           <input type="text" th:name="id">
+           <select th:name="country">
+               <option value="lv">Latvija</option>
+               <option value="en">UK</option>
+               <option value="ru">Russia</option>
+           </select>
+        <input type="submit">
+    </form>
+</body>
+</html>
